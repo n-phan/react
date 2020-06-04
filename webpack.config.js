@@ -1,9 +1,9 @@
-var path = require("path");
+const path = require("path");
 
-var DIST_DIR = path.resolve(__dirname, "dist");
-var SRC_DIR = path.resolve(__dirname, "src");
+const DIST_DIR = path.resolve(__dirname, "dist");
+const SRC_DIR = path.resolve(__dirname, "src");
 
-var config = {
+module.exports = {
     entry: SRC_DIR + '/app/index.js',
     output: {
         path: DIST_DIR + "/app",
