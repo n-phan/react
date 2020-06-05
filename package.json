@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "run-script-os",
-    "start:darwin:linux:": "npm run build:darwin:linux",
     "start:win32": "npm run build:win32",
     "build:win32": "webpack -d && copy src\\index.html dist\\index.html && webpack-dev-server --content-base src\\ --inline --hot",
+    "start:darwin:linux:": "npm run build:darwin:linux",
     "build:darwin:linux": "webpack -d && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --inline --hot",
     "build:prod": "webpack -p && copy src/index.html dist/index.html"
   },
