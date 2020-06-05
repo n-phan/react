@@ -1,26 +1,33 @@
-import React from "react";
-import { render } from "react-dom";
+import React from 'react';
+import { render } from 'react-dom';
 
-import { Header } from "./components/Header";
-import { Home } from "./components/Home";
+import { Header } from './components/Header';
+import { Home } from './components/Home';
 
 class App extends React.Component {
     render() {
+        let user = {
+            name: 'Bob',
+            hobbies: ['Sleeping', 'Eating']
+        };
+
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-xs-10 col-xs-offset-1">
+            <div className='container'>
+                <div className='row'>
+                    <div className='col-xs-10 col-xs-offset-1'>
                         <Header/>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-xs-10 col-xs-offset-1">
-                        <Home/>
+                <div className='row'>
+                    <div className='col-xs-10 col-xs-offset-1'>
+                        <Home name={'Nathan'} age={20} user={user}>
+                            <p>This is a paragraph.</p>
+                        </Home>
                     </div>
                 </div>
             </div>
         );
     };
-}
+};
 
-render(<App/>, window.document.getElementById("app"));
+render(<App/>, window.document.getElementById('app'));
